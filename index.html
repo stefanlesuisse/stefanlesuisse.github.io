@@ -89,6 +89,14 @@
     .versions .latest { background: var(--snap); color: #000; border-color: transparent; }
     .versions .latest:hover { background: #fff95a; }
     .versions .latest .sub { color: rgba(0,0,0,.7); }
+    .versions .v3 { padding: 13px 16px 14px; border-radius: 14px; background: var(--snap); color: #000; }
+    .versions .v3-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .versions .v3 .sub { color: rgba(0,0,0,.7); }
+    .versions .pistes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+    .versions .pistes a { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; min-height: 56px; padding: 10px 12px; border-radius: 10px; background: #000; color: var(--snap); border: 0; }
+    .versions .pistes a:hover { background: #1a1a1a; transform: translateY(-2px); }
+    .versions .pistes b { font-size: 16px; }
+    .versions .pistes span { font-size: 12px; opacity: .85; }
     .tag { flex: none; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; background: #000; color: var(--snap); }
     .arrow { flex: none; opacity: .6; }
 
@@ -126,9 +134,17 @@
       <div class="body">
         <p class="kicker">Site vitrine · Boutique de vêtements à Lille</p>
         <h2>Que Du Full</h2>
-        <p class="desc">C.P. Company, Stone Island, Parajumpers, Casablanca, AMI Paris. Deux versions du site : la vitrine complète, puis la boutique en 3D.</p>
+        <p class="desc">C.P. Company, Stone Island, Parajumpers, Casablanca, AMI Paris. La vitrine complète, la boutique en 3D, puis trois pistes pour la V3 avec la story Snap en direct.</p>
         <ul class="versions">
-          <li><a class="latest" href="https://quedufull.pages.dev/v2/"><div><b>V2 — La boutique</b><br><span class="sub">Film avec Nono, portant 3D, cabine d'essayage, feed vidéo.</span></div><span class="tag">Dernière</span></a></li>
+          <li class="v3">
+            <div class="v3-head"><div><b>V3 — Trois pistes au choix</b><br><span class="sub">Pièces détourées, contour rouge, story Snap en direct.</span></div><span class="tag">Nouveau</span></div>
+            <nav class="pistes" aria-label="Pistes de la V3">
+              <a href="https://quedufull.pages.dev/v3-a/"><b>A</b><span>Sobre</span></a>
+              <a href="https://quedufull.pages.dev/v3-b/"><b>B</b><span>Éditoriale</span></a>
+              <a href="https://quedufull.pages.dev/v3-c/"><b>C</b><span>En direct</span></a>
+            </nav>
+          </li>
+          <li><a href="https://quedufull.pages.dev/v2/"><div><b>V2 — La boutique</b><br><span class="sub">Film avec Nono, portant 3D, cabine d'essayage, feed vidéo.</span></div><span class="arrow">→</span></a></li>
           <li><a href="https://quedufull.pages.dev/v1/"><div><b>V1 — Vitrine complète</b><br><span class="sub">Vidéos TikTok, budgets, stock par taille, arrivages.</span></div><span class="arrow">→</span></a></li>
         </ul>
       </div>
